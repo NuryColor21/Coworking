@@ -12,12 +12,19 @@ body{
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between; /* Distribuye los elementos a los extremos */
     align-items: center; /* Alinea verticalmente los elementos */
     padding: 10px;
     margin-top: 1rem;
     margin-bottom: .5rem;
 }
+
+@media (min-width:768px) {
+        header{
+            flex-direction: row;
+        }
+    }
 
 h1{
     font-family: 'Krub', sans-serif;
@@ -26,6 +33,7 @@ h1{
 
 .nombre_empresa{
     text-transform: uppercase; /*Poner el nombre en letra mayuscula*/
+    margin-bottom: 10px;
 }
 
 a{
@@ -78,6 +86,10 @@ a{
     font-size: 1.5rem;
 }
 
+.eslogan{
+    text-shadow:5px 3px 5px rgba(152, 152, 152, 0.728);
+}
+
 h2{
     text-align: center;
     font-family: 'Bebas Neue', sans-serif; 
@@ -96,10 +108,15 @@ h2{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 30px;
+    padding-top: 20px;
 }
 .informacion_acerca p{
     line-height: 2; /*Interlineado*/
-    text-align: justify;
+
+}
+.imagen{
+    border-radius: 9px;
 }
 
 .informacion_servicio{
@@ -107,6 +124,14 @@ h2{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+.informacion_servicio p{
+    width: 350px;
+}
+.tercero{
+    margin-top: 17px;
 }
 
 .servicio{
@@ -119,10 +144,26 @@ h2{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-bottom: 80px;
+    padding-top: 15px;
+    
+}
+.ubicacion{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
 }
 
 .letras_blancas{
-    color:var(--blanco)
+    color:var(--blanco);
+    width: 550px;
+}
+.ubicacion-complata{
+    margin-top: 40px;
+    margin-right: 30px;
+}
+.letras{
+    width: 300px;
+    align-items: center;
 }
 
 img{
@@ -130,6 +171,22 @@ img{
     height: 200px; 
 }
 
+.margen_izq{
+    width: 350px;
+    height: 270px;
+}
+.grid_3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Dos columnas de igual tamaño */
+    flex-direction: column;
+}
+
+/*hay que ver que jale esto espara que el grid de servicio sea responsivo*/
+@media (min-width:768px) {
+    .grid_3{
+        flex-direction: row;
+    }
+}
 
 .boton{
     background-color: var(--azul_marino);
@@ -142,6 +199,15 @@ img{
 
 .footer{
     text-align: center;
+    padding-top: 30px;
+}
+.centro{
+    display: flex;
+    justify-content: center;
+}
+
+.derechos{
+    width: 200px;
 }
 
 
